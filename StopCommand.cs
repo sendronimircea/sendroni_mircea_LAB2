@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 
-namespace sendroni_mircea_LAB2.CustomCommands
+namespace sendroni_mircea_LAB2.CustomCommandss
 {
     class StopCommand
     {
@@ -12,8 +12,7 @@ namespace sendroni_mircea_LAB2.CustomCommands
         {
             InputGestureCollection myInputGestures = new InputGestureCollection();
             myInputGestures.Add(new KeyGesture(Key.S, ModifierKeys.Control));
-            launch_command = new RoutedUICommand("Launch", "Launch",
-           typeof(StopCommand), myInputGestures);
+            launch_command = new RoutedUICommand("Launch", "Launch", typeof(StopCommand), myInputGestures);
         }
         public static RoutedUICommand Launch
         {

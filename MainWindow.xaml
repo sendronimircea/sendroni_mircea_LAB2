@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:sendroni_mircea_LAB2"
-        xmlns:CustomCommands="clr-namespace:NumeStudent_PrenumeStudent_Lab2.CustomCommands"
+        xmlns:local="clr-namespace:sendroni_mircea_LAB2;assembly=sendroni_mircea_LAB2"
+        xmlns:CustomCommands="clr-namespace:sendroni_mircea_LAB2.CustomCommandss;assembly=sendroni_mircea_LAB2"
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     <Grid>
@@ -63,15 +63,15 @@
                         <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
                     <MenuItem Header="Filled" Click="FilledItems_Click">
-                        <Grid MenuItem.Click="FilledItemsShow_Click">
                         <MenuItem Header="Lemon"/>
                         <MenuItem Header="Chocolate"/>
                         <MenuItem Header="Vanilla"/>
                     </MenuItem>
+                    <Grid MenuItem.Click="FilledItemsShow_Click"/>
                 </MenuItem>
-                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click" InputGestureText="Ctrl+S" Command="CustomCommands:StopCommand.Launch"/>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click" InputGestureText="Ctrl+S" Command="CustomCommandss:StopCommand.Launch"/>
                 <MenuItem Header="Inventory" Command="ApplicationCommands.Print" ></MenuItem>
             </MenuItem>
-        </Menu>
+        </Menu> 
     </Grid>
 </Window>
